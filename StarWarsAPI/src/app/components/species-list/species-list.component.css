@@ -1,0 +1,46 @@
+
+.example-card {
+    width: 18%;
+    border: 1px solid black;
+    display: inline-block;
+    margin: 20px ;
+    border-radius: 5%;
+    text-align: center;
+   
+  }
+
+mat-card-title{
+
+  text-align: center;
+
+  }
+  
+h1{
+  text-align: center;
+}
+
+p,h4{
+  text-align: center;
+
+}
+
+.cont{
+display: flex;
+flex-wrap: wrap;
+margin: 0 auto;
+text-align: center;
+background-color: black;
+}
+
+button{
+  background-color: white;
+  width: 5%;
+  height: 35px;
+  border-radius: 20%;
+}
+button:hover{
+  background-color: rgb(190, 190, 190);
+  width: 5%;
+  height: 35px;
+  border-radius: 20%;
+}
