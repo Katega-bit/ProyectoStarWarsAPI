@@ -16,7 +16,7 @@ const routes: Routes = [
   {path: 'starship-list', component: StarshipListComponent},
   {path: 'vehicles-list', component: VehiclesListComponent},
   {path: 'planets-list', component: PlanetListComponent},
-  {path: '', redirectTo: '/people-list', pathMatch: 'full'},
+  {path: '', redirectTo: '/contents', pathMatch: 'full'},
   
   ];
 @NgModule({
