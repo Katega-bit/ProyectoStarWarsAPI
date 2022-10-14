@@ -1,0 +1,49 @@
+<header [ngStyle]="{ 'text-align': 'center' }">
+    <div [ngStyle]="{ 'background-color': 'black' }">
+      <img
+        [ngStyle]="{ width: '15%' }"
+        src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6c/Star_Wars_Logo.svg/1280px-Star_Wars_Logo.svg.png"
+      />
+    </div>
+  </header>
+  <div class="cont">
+      <div [ngStyle]="{ width: '85%', margin: 'auto' }">
+        <div [ngStyle]="{ display: 'flex' }">
+          <h3
+            [ngStyle]="{
+              width: '56%',
+              'text-align': 'start',
+              color: 'white',
+              'font-size': '30px',
+              'font-family': 'monospace'
+            }"
+          >
+            <a routerLink="/contents">Home</a>/starship
+          </h3>
+          <h3
+            [ngStyle]="{
+              'text-align': 'end',
+              'align-self': 'center',
+              width: '40%'
+            }"
+          >
+            <span
+              [ngStyle]="{ 'align-self': 'center', 'text-align': 'start' }"
+              *ngFor="let in of counter(); let i = index"
+              ><button (click)="getStarshipPage(i + 1)">{{ i + 1 }}</button
+              >&nbsp;</span
+            >
+          </h3>
+        </div>
+        <div class="cart">
+          <mat-card class="example-card" *ngFor="let starship of starshipList">
+            <mat-card-header>
+              <div mat-card-avatar class="example-header-image"></div>
+              <mat-card-title>{{ starship.name }}</mat-card-title>
+            </mat-card-header>
+            <img mat-card-image [src]="showImg(starship)"  onerror="this.onerror = null; this.src = 'https://starwars-visualguide.com/assets/img/placeholder.jpg'"/>
+            <mat-card-content> </mat-card-content>
+          </mat-card>
+        </div>
+      </div>
+    </div>
